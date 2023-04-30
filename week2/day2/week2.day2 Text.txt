@@ -1,0 +1,156 @@
+Select:
+Select class
+--------------------
+Select its a class
+<select>
+   <option>value=blue()>visibletext</option>
+Three method:
+1.select by index(0)
+2.select by value("attribute value")
+3.select by visibletext("black colour visible text")
+
+findElement returns----WebElement
+How  to handle dropdown
+Select tag
+
+if not in select tag you can use as usual click()
+
+
+wait
+-----
+ to addressing timinig difference between script & application
+ 
+ Selenium wait
+ --------------
+ 1.Implicitly Wait
+ 2.Explicitly wait
+  
+  
+  Java Wait(Explicitly wait)
+  ---------
+  Thread.sleep(time)--->it will slow down my execution
+  -this has to be applied wherever need we can use.
+  -single line
+  -it will wait till the end of the time limit
+
+ 1.Implicitly Wait
+ 30sec
+ -its a common wait for all locators (FindElement ,FindElements)
+ -it used to avoid NoSuchElementException when the element is loaded little late
+ -if the element is loaded with in given time,it will locate the element immediately
+ -Best pratice to apply ImplicitWait at the starting of your script.
+
+cab
+7.30 ---- 7.45
+
+7.46 -----7.45
+NoSuchElementException
+
+
+Class Room:
+Class name LearnImplicitWait
+https://login.salesforce.com/
+username:hari.radhakrishnan@qeagle.com
+Password:Leaf@1234
+click Login button
+click on App launcher
+
+
+Basic Xpath:
+  -Absolute Xpath
+     -It starts with "/"
+     -you should start traversing from the root node
+     -tagname is mandatory
+     -It's not preferred
+
+  Ex:  /html/body/div[2]/div[2]/div/form/p/input 
+    
+Relative xpath:
+   -It starts with "//"
+   -tagname is mandatory
+
+Note:
+To open the filter box in the Dom-press ctrl+f
+
+xpath(5):
+ 1.Attribute based xpath
+  Syntax: //tagName[@attributeName='attributeValue']
+  Ex    :  //input[@value='Login']
+
+ 2.Text Based xpath:
+   Syntax: //tagName[text()='textValue']
+   Ex    : //a[text()='Leads']
+
+ 3.Partial Attribute based xPath:
+   Syntax:  //tagName[contains(@attributeName,'partialAttributeValue')]   
+   Ex:    //li[contains(@class,'menu')] 
+
+ 4.Partial text based xPath:
+   Syntax:  //tagName[contains(text(),'textValue')]  
+   Ex:     //section[contains(text(),'Valasaivettikad')]     
+
+ 5.Index Based xPath:
+ (any xpath)[index] start from 1 xpath --->1
+   Syntax:  (//tagName[@attributeName='attributeValue'])[index]
+   
+   Ex:     (//input[@class='inputLogin'])[1]
+
+   
+Week2day2:
+=========
+Find the xpath 
+https://www.nykaa.com/    ->Search box  using (name) attribute
+https://www.zoomcar.com/in/chennai -> Text based 
+https://buythevalue.in/   -> Text based (partial)
+https://www.irctc.co.in/nget/train-search ->Partial attribute based xpath
+
+Classroom:
+  http://leaftaps.com/opentaps/control/main
+  1)Write xpath for the following fields:
+    username
+    Password
+    crm/sfa link
+    leads link
+    CreateLead link
+    firstname ,lastname,companyname
+    CreateLead button   
+
+
+
+Axes xpath:
+Advanced xPath(8):
+
+1)Parent to Child:
+  Syntax: BasicXpathforParent/childtagName
+  Ex:  //form[@id='login']/p
+(//form[@id='login']/p)[3] ---->index 
+
+2)Child to parent:
+  Syntax:  BasicXpathforChild/parent::parenttagName 
+  Ex:    //p[@class='top']/parent::form 
+
+3)GrandParent to GrandChild:
+  Syntax:  BasicXpathforGrandParent//grandChildtagName  
+  Ex://form[@id='login']//input
+
+4)GrandChild to GrandParent:
+  Syntax:  BasicXpathforGrandChild/ancestor::grandParenttagName      
+  Ex:      //input[@id='username']/ancestor::form
+
+5)ElderCousin to YoungerCousin:
+  Syntax: Xpath_ElderCousin/following::youngerCousinTagName    
+  Ex:  //label[text()='Username']/following::label   
+
+6)YoungerCousin to ElderCousin:
+  Syntax:  youngercousinXpath/preceding::elderCousinTagName
+  Ex:     //input[@name='PASSWORD']/preceding::label
+
+7)ElderSibling to YoungerSibling:
+   Syntax:  ElderSiblingXpath/following-sibling::youngerSiblingTagName
+   Ex:     //label[text()='Username']/following-sibling::input
+
+8)YoungerSibling to ElderSibling:
+   Syntax:  youngerSiblingXpath/preceding-sibling::elderSiblingTagName
+   Ex:     //input[@name='PASSWORD']/preceding-sibling::label
+      
+https://pizzaonline.dominos.co.in/menu
