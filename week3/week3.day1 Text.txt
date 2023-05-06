@@ -1,0 +1,57 @@
+OOPs:
+Object oriented programming language
+1.flexibility
+2.maintain 
+3.reuse
+Class-blue print methods data variable
+object-instance of class
+
+---->Inheritance
+---->Polymorphism
+---->Abstraction
+---->Encapsulation
+
+Inheritance:
+------------
+inherit the property (variable/method) from one class to another
+1.Re usabilityof code
+2.memory management
+keyword-extends
+Base/super/parent class
+derived/subclass/child class
+types:
+single inheritance
+Multilevel inheritance
+Multiple inheritance-Not support in java class but we can achieve by interface
+
+
+Polymorphism:
+--------------
+Poly -many      morphism-forms
+mobile-call
+      -TextMsg
+	  -video
+Type:
+Overloading-static polymorphism/compile-time polymorphism
+same method name/different arg /diff data type
+frame(int index)
+frame(String id/name)
+frame(Webelement)
+
+java
+-----
+substring(start index)
+substring(start,stop index)
+
+Dynamic polymorphism/Run-time polymorphism
+overriding-same method name,same arg,same data type but different class
+green  white triangle 
+
+2.Abstraction:
+To show the necessary things to the user and hide the details.
+keyword-Abstract   public abstract class classname
+variable methods create obj
+
+Interface
+interface extends interface
+class to interface implement
