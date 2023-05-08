@@ -1,0 +1,132 @@
+String:
+-------
+"demosalesmanager"
+sequence of character
+'T''E''S''T'
+Testleaf
+int float char
+
+String name="Testleaf";----Literal
+
+String fname="TestLeaf";
+
+String company=new String("Testleaf")---->object
+Array:
+-----
+fixed in size
+same data type
+
+Collection
+-----------
+is an object groups of multiple element into single unit
+any size
+Dynamic memory
+can grow or shrink
+insert delete modify
+interface
+
+List     Set
+List
+interface
+object-->no
+implementation class
+1.ArrayList
+2.LinedList
+
+List<wrapper Class> lstName=new ArrayList<wrapper Class>();
+Example:
+List<String> lstName=new ArrayList<String>();
+
+List<Object> lstName=new ArrayList<Object>();
+
+
+primitive type               wrapper class:
+
+int                           Integer
+
+float                         Float
+
+double                        Double
+
+long                           Long
+
+short                          Short
+
+boolean                        Boolean
+
+char                           Character
+
+Collection:
+Interface
+Dynamic size
+Group of obj
+Types:
+List
+=====
+Interface
+allow duplicate
+Insertion order
+single dimension
+implementation class
+1.ArrayList
+index start from 0 a[0]=1;
+
+a[0]=1;
+a[1]=2;
+a[2]=6;
+a[3]=4;
+a[4]=5;
+
+search a[3]=? 4
+
+2.LinkedList
+Insertion order
+node
+List<String> lstname=new ArrayList();
+lstname.add();
+lstname.remove();
+lstname.clear();
+lstname.contains();
+lstname.size();
+lstname.isEmpty();
+lstname.get(indext);
+Collections.sort(lstname);
+
+Set
+===
+-Is also interface
+-Not allow duplicate(only unique)
+-single Dimension[]
+String[]={};
+-Dynamic Array
+
+-Implementation class
+1.HashSet
+
+using Hasing algorithm 
+
+Random result/fast result
+
+2.LinkedHashSet
+Maintain insertion order
+
+3.TreeSet
+Number order,Alphabetic order----->Ascii order
+syntax
+======
+Set<wrapperclass>setname=new Implementation class<wrapperclass>();
+setname.add();
+setname.remove();
+setname.clear();
+setname.isEmpty();
+setname.contains();
+setname.get();--->implementation class????
+forEach loop
+
+
+Set
+interface
+implementation class
+1.HashSet---->Fast result--->Random
+2.LinkedHashSet--->Insertion order 
+3.TreeSet---->Ascii order ---->alphabet
