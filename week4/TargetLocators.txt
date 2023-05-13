@@ -1,0 +1,278 @@
+Target Locators:
+--------------
+
+Alert (Selenium WebDriver)
+
+-In Selenium, an alert refers to a JavaScript Alert dialog box that is displayed by a web application.
+-Alert dialogs are commonly used to present important messages, warnings, or prompts to the user.
+
+-Selenium provides methods to handle various types of alerts, including simple alerts, confirmation alerts, and prompt alerts.
+- Modal Dialog
+- Not inspectable (it is javascript not a html code)
+
+Here are the different types of alerts and how to handle them using Selenium:
+
+Types
+
+- Simple Dialog (Only one option) - Information !
+- Confirm Dialog (2 options) - Confirmation !
+- Prompt Dialog (Text Box + 2 Boolean) - Data Collection + Confirmation !
+
+Methods
+
+- accept    (Positive Action)
+- dismiss   (Negative Action)
+- sendKeys  (Type value on the prompt text) -- always clear before type
+- getText   (Read the title and not the domain)
+
+Alert alert = driver.switchTo().alert();
+
+alert.accept();
+
+alert.dismiss();
+
+Simple Alerts:
+===============
+Simple alerts are basic message boxes with an OK button.
+They display a message and require the user to click OK to accept/dismiss them.
+
+To handle simple alerts, you can use the Alert class provided by Selenium.
+steps to handle the alert:
+step:1 You can switch to the alert using 
+driver.switchTo().alert()
+step:1 then accept the alert using alert.accept().
+
+
+Confirmation Alerts:
+====================
+Confirmation alerts have two buttons: OK and Cancel.
+They ask the user to confirm or cancel an action.
+
+To handle confirmation alerts, 
+
+Step1:you can switch to the alert using 
+
+driver.switchTo().alert()
+
+Step2:then accept or dismiss the alert using 
+alert.accept()   
+   or
+alert.dismiss() 
+
+Prompt Alerts:
+
+Prompt alerts are similar to confirmation alerts but also include an input field.
+They ask the user to enter some value or input.
+To handle prompt alerts, 
+Step1:you can switch to the alert using 
+driver.switchTo().alert(), 
+Step2:send keys to the input field using alert.sendKeys(), 
+
+Step3:then accept or dismiss the alert using 
+alert.accept() or alert.dismiss() 
+
+syntax:
+driver.SwitchTo().alert();
+
+Limitation
+
+- You cannot take snapshot of the alert 
+
+Exception
+- If you try interacting with DOM element without closing alert: UnhandledAlertException
+- If you are interacting with an alert through code but alert did not appear: NoAlertPresentException
+
+Sweet Alert - inspectable, Inspect -> findElement -> Click ! Can take snap !
+driver.findElement(By.locator("")).click();
+	
+	
+Class Room 1:
+-------------
+Launch https://leafground.com/alert.xhtml
+Click on the Show button next to Prompt Dialog
+Switch the driver focus to alert -driver.switchTo().alert()
+Enter the text in the alert text box (using sendKeys)
+Accept the alert (alert.accept();)
+Confirm the text entered is displayed in the webpage
+---------------------------------------------------------------------
+<html>
+<iframe>
+   <html>
+   </html>
+
+Frame
+======
+Frame handling in Selenium refers to the process of interacting with HTML frames 
+or iframes (inline frames) present within a web page.
+Frames are used to divide a web page into multiple independent sections 
+or sub-windows, where each frame can contain its own HTML document.
+
+-it's important to understand how to switch focus between frames in order to
+interact with elements inside them.
+-Selenium provides methods and techniques to locate and switch to different frames within a web page.
+
+- HTML element that helps developers to organize the set of elements
+
+- iframe (tag) that means it is in-line frame (frame / frameset)
+
+
+NoSuchElement
+
+- Either your locator is wrong 
+- Or the element may be living inside the frame
+
+Exception
+
+- NoSuchFrameException
+
+Example for Overloading:
+
+Methods to handle frame:
+- frame(int index) // this is more than enough !
+- frame(String nameOrId)
+- frame(WebElement ele)
+
+Locating Frames:
+
+Frames can be located using various techniques such as index, name, ID, or by locating elements within the frame.
+You can use methods:
+driver.switchTo().frame(index), 
+driver.switchTo().frame(nameOrId), 
+or driver.switchTo().frame(element)to switch to a specific frame based on the locator strategy.
+
+Switching to Frames:
+======================
+Once a frame is located, you can switch the driver's focus to that frame 
+using driver.switchTo().frame(frameLocator).
+After switching to a frame, any subsequent Selenium commands will be executed within that frame context.
+
+Switching Back to Default Content:
+
+To switch back to the main/default content or parent frame, 
+you can use driver.switchTo().defaultContent()
+
+This is necessary when you need to interact with elements
+outside of any frames or switch to a different frame hierarchy.
+
+Nested Frames:
+==============
+If you have frames within frames (nested frames),
+you need to switch focus to each frame level by level.
+You can switch to the parent frame using driver.switchTo().parentFrame()
+or switch to a specific frame within the current frame context.
+
+Come out of the frame
+======================
+- switch to defaultContent
+------------------------------------------------------
+
+SnapShot:
+=========
+a snapshot (or screenshot) refers to capturing an image of the current state of a web page 
+or a specific element on the page.
+Taking snapshots can be helpful for various purposes, 
+---debugging
+---error reporting
+---generating test evidence.
+
+To capture a snapshot in Selenium Java,
+you can use the TakesScreenshot interface provided by Selenium WebDriver.
+
+The getScreenshotAs method is called to capture the screenshot 
+as a byte array (OutputType.BYTES), 
+which you can further process or save to a file using libraries like Apache Commons IO.
+
+Taking snapshots:
+can help you troubleshoot issues, verify expected states,
+and provide visual evidence of test execution.
+                 //Take a snapshot
+		Step1:		File source = driver.getScreenshotAs(OutputType.FILE);
+				//Create folder to save the img file
+		Step2:		File dest =new File("./snap/img1.png");
+				//Merge source and destination
+		Step3:		FileUtils.copyFile(source, dest);
+
+Ensure that you have the Apache Commons IO library added to your project dependencies
+to use the FileUtils class for file operations.
+
+Class Room 2:
+Launch the browser
+Load the url: https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm
+Check the frame present if yes Handle the frame
+Click Try It Button
+Click OK/Cancel in the alert
+take a snapshort
+Confirm the action is performed correctly by verifying the text !!
+
+Hint
+Switch to the frame
+Then click Try It with xpath
+Then perform accept / dismiss
+Get the text using id Verify the text based on the action
+-------------------------------------------------------------------
+Window / Tab
+================
+-Window handling in Selenium refers to the process of 
+managing multiple browser windows or tabs during test automation.
+-It allows you to switch the focus of the WebDriver to 
+different windows or tabs, interact with their content, 
+and perform actions within each window or tab.
+- Window or Tab is technically same
+- Window / Tab -> URL / browser controls.
+
+C43B89A7280850BC71458E76008F64FE
+FA8ED917A46E3F150C369820BB828DA3
+
+Challenges
+
+- Window URL / Title / Sequence Number can change
+- So, how to find the window uniquely?
+
+Selenium Way
+
+- Every new window -> tag it -> new WindowHandle -> String (unique)
+
+
+Exception
+
+NoSuchWindowException
+
+Close and Quit
+
+How to swtitch to a new window ?
+
+- getWindowHandles()
+- Convert Set to List
+- Pick the particular window using get(index)
+- Switch to the window using the handle
+- Close or Quit
+
+open window will be closed by driver.close();
+To close all the open window driver.quit();
+How to switch to a new window:
+-------------------------------
+1.how to get the reference?
+-getWindowHandle()---when ever u open the window
+to get currrent window reference
+
+-getWindowHandles()--to get the reference of all window open
+
+2.How to switch the control
+getWindowHandles() return as a Set--remove the duplication
+create a list
+Two window get()
+driver.switch().window(lstname.get(0))
+convert set into list
+pick the particular window using get(index)
+apply the driver.switch().window(lstname.get(0))
+close/quit
+
+
+
+Class Room 3:
+Navigate to https://www.irctc.co.in/
+Click on FLIGHTS link
+Switch to the Flights window
+Print the Title of the Flights window
+Close the Flights window alone
+Print the Train search window title (First window)
