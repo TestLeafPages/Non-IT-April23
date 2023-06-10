@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="42570" started-at="2023-06-10T18:36:15 IST" finished-at="2023-06-10T18:36:58 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="42570" started-at="2023-06-10T18:36:15 IST" finished-at="2023-06-10T18:36:58 IST">
+      <class name="testcase.LoginTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcase.LoginTest@553a3d88]" name="setup" is-config="true" duration-ms="0" started-at="2023-06-10T18:36:15 IST" finished-at="2023-06-10T18:36:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testcase.LoginTest@553a3d88]" name="launchBrowser" is-config="true" duration-ms="8380" started-at="2023-06-10T18:36:17 IST" finished-at="2023-06-10T18:36:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:testcase.LoginTest@553a3d88]" name="loginTest" duration-ms="3019" started-at="2023-06-10T18:36:25 IST" data-provider="getData" finished-at="2023-06-10T18:36:28 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demosalesmanager]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcase.LoginTest@553a3d88]" name="tearDown" is-config="true" duration-ms="193" started-at="2023-06-10T18:36:28 IST" finished-at="2023-06-10T18:36:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testcase.LoginTest@553a3d88]" name="launchBrowser" is-config="true" duration-ms="3217" started-at="2023-06-10T18:36:28 IST" finished-at="2023-06-10T18:36:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:testcase.LoginTest@553a3d88]" name="loginTest" duration-ms="3062" started-at="2023-06-10T18:36:32 IST" data-provider="getData" finished-at="2023-06-10T18:36:35 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[democsr]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcase.LoginTest@553a3d88]" name="tearDown" is-config="true" duration-ms="721" started-at="2023-06-10T18:36:35 IST" finished-at="2023-06-10T18:36:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcase.LoginTest -->
+      <class name="testcase.CreateLeadTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcase.CreateLeadTest@28ac3dc3]" name="setup" is-config="true" duration-ms="25" started-at="2023-06-10T18:36:15 IST" finished-at="2023-06-10T18:36:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testcase.CreateLeadTest@28ac3dc3]" name="launchBrowser" is-config="true" duration-ms="8119" started-at="2023-06-10T18:36:17 IST" finished-at="2023-06-10T18:36:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="createLeadTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.CreateLeadTest@28ac3dc3]" name="createLeadTest" duration-ms="15347" started-at="2023-06-10T18:36:25 IST" data-provider="getData" finished-at="2023-06-10T18:36:40 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demosalesmanager]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Qeagle]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Princila]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Edward]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[897]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLeadTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcase.CreateLeadTest@28ac3dc3]" name="tearDown" is-config="true" duration-ms="280" started-at="2023-06-10T18:36:40 IST" finished-at="2023-06-10T18:36:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testcase.CreateLeadTest@28ac3dc3]" name="launchBrowser" is-config="true" duration-ms="3215" started-at="2023-06-10T18:36:41 IST" finished-at="2023-06-10T18:36:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="createLeadTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.CreateLeadTest@28ac3dc3]" name="createLeadTest" duration-ms="13526" started-at="2023-06-10T18:36:44 IST" data-provider="getData" finished-at="2023-06-10T18:36:57 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[democsr]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[CTS]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Gokul]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[99]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLeadTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcase.CreateLeadTest@28ac3dc3]" name="tearDown" is-config="true" duration-ms="289" started-at="2023-06-10T18:36:57 IST" finished-at="2023-06-10T18:36:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcase.CreateLeadTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

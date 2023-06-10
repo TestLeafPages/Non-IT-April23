@@ -1,0 +1,104 @@
+Today's Agenda
+--------------
+Page Object Model
+-------------------
+----set up for sequential execution
+----set up for parallel execution
+----Integration of data parameterization
+Framework
+---------
+its a real or conceptial structure intended to guide or support the building of product.
+
+why framework
+--------------
+----To produce uniform output/result
+----To increase the productivity
+----Anyone can able to produce same result
+----Easy maintenance of script
+----Reduce the duplicate code
+----supports multi-Lingual application
+----support for better reporting(Extend rep,index html)
+
+POM--Page object Model
+POM.xml---Project object model
+POM--Page object Model
+-------------------------
+Design pattern to build a automation framework.
+
+selenium java
+webdrivermanager
+Testng
+apache poi
+
+
+leaftap
+--------
+how many page
+1.login
+2.homepage(crmsfa)
+3.leadpage
+4.create lead
+5.viewlead
+Steps
+------
+1.Create a package name pages
+2.create java class for each page that we navigate in the application
+3.create method for each action and verification in the page
+4.create package for common class as ProjectSpecificMethod extends the class
+5.all the methods in the page should have return type based on landing page return this(same),different page (return new page name)
+6.Create new package for testcase create the class for testing
+7.all the testcase java class also should extends base class project specific method
+
+ClassRoom
+----------
+1.Create Maven project
+2.Add all the necessary dependencies
+3.Create base,pages,testcases,util package
+4.setup baseclass for common variables and methods
+5.setup pages for createLead testcase with proper return statement for methods
+6.Create testcase for create lead and call the method for pages and execute
+
+Sequential:
+Static keyword
+ convert testng xml then run the testcase.
+ChromeDriver: chrome on WINDOWS (b27e65b134df8679401c44b98e2805ca)
+ChromeDriver: chrome on WINDOWS (bc18063c470bf2698190f2324a63bf6a)
+
+ChromeDriver: chrome on WINDOWS (740e1815854778f51191487b1649a754)
+ChromeDriver: chrome on WINDOWS (b86f0ebeca5d565b1aa344ac73334f95)
+
+
+Parallel execution:
+1.Remove the static keyword
+2.pass the driver to all pages
+ How to pass the driver from testcase to pages
+1.Create public constructor in all pages with chromeDriver as a aruguments
+constructor code: this driver=driver;
+2.pass the driver to all constructor call starting from the testcase and all the constructor method
+
+
+Integrate DataProvider and ApachePOI
+------------------------------------
+1.Create excel data sheet
+2.create data folder and copy paste the excel file
+3.copy and paste ReadExcel java class under util package
+4.copy paste the excelfile name dataprovider in projectspecificmethod(import from utils)
+
+
+
+Excel---DataProvider----@Test
+@Beforetest-----its giving filename(createlead)
+    @DataProvider
+           @Test
+
+
+Steps to Integrate Data with POM:
+----------------------------------
+PreCondition: Change normal methods into parameterized methods to receive inputs
+1. Create the excel sheet under testData folder in the project
+2. Copy ReadExcel.java and paste it under utils package
+3. Copy excelFileName global variable and @DataProvider code from ProjectSpecificMethods and paste in ProjectSpecificMethods
+        - Correct the ReadExcel import statement
+4. Copy and paste setData() from the testcase
+5. Integrate DataProvider with the test case with right number of arguments
+6. Pass the variables to the respective methods
