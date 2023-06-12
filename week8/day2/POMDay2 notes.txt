@@ -1,0 +1,161 @@
+
+Today's Agenda
+--------------
+
+Exception Handling
+----------------
+NosuchElement
+NoAlertPresentException
+staleElementexception
+Unhandled alert
+NosuchFrame
+null pointer Exception
+
+problem during execution
+can handle in program
+two types
+-----------
+compiletime/checked exception
+RunTime/unchecked exception
+all eleniium exceptions are run time exception
+
+How to handle the execption
+-----------------------------
+Two ways
+
+-----------
+by my self---try catch finally
+handover to someother----throw throws
+
+keyword-try catch finally throw throws
+
+
+
+throw throws
+
+try
+------
+try i s a block of code
+contains happy path
+we should not use try alone
+try with catch
+try with finally
+try catch finally
+
+try{
+syso(4/0);
+}
+finally---mandatory print pass or fail
+============================================================================
+
+
+
+1.Extent Report
+----------------
+Why we need report?
+
+index.html
+Generated report based on html
+1.Very rich looking report
+-----Graphical representation of the summary.
+2.we can Attach screen shot for faiure
+3.we can have report based on categories like smoke,functional,regression.
+4.we can have report based on author
+5.consolidated dashboard with piechart
+
+Dependency
+----------
+aventStack---version 3.1.5 free version
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>3.1.5</version>
+</dependency>
+
+ExtentHtmlReporter
+Extentreporter
+ExtentTest
+Media EntityBuilder
+
+step1:setup the report file to capture the status
+step2:setup thedetails foe a single testcase
+     testcase name
+     testcase description
+     testcase category
+     testcase author
+step3:Capture the status for each step
+
+
+Integrate extent Report 
+-------------------------
+steps:
+1.Create startReport()with @BeforeSuite in ProjecctSpecificMethod and Keep all the common code
+2.Make ExtentReport as Global variable
+3.create stopReport() @AfterSuite to have extent.flush().
+4.Create testdetail()with @beforeClass for test case detail code
+5.Declare ExtentTest Globally.
+6.Create Global variable testname,testDescription,test author,and test category
+7.Replace the hard code values with respective variable name
+8.Assign the value for the variable in the setup() in the testcase
+
+@BeforeSuite-----to start the report
+  @BeforeTest----setting up the values for testcase name,des,aut,category
+    @Beforeclass---set up the values in the report
+      @DataProvider(2 set )
+       @beforeMethod
+                @Test
+
+
+1.Create reportStep() with 2 args(stepDesc,status)
+2.Add conditional statement to call pass()/fail() based on the status
+3.In the step level method ,surround the selenium code with try catch block
+4.call reportStep() from try and catch blolck with pass and fail status
+
+Steps to attach Screenshot:
+------------------------------
+1.Create takeSnap()with selenium code to take the screen shot
+
+2.Generating the random number and append the file name with random number
+3.Have to return with random number
+4.call the takesnap() from snapshot and get a random number to append with filename
+
+
+Hybird Framework:
+understand the  components in the Framework
+what is the purpose of each and every component in the framework.
+
+How to use this framework for a new application
+How to explain the framework in Interview
+
+How to import the framework in Eclipse:
+
+1.Navigate to below repo:
+
+2.Download the framework Leafbot.zip
+
+3.Go to download and extract the file from Leafbot.zip
+
+4.Right click on project explorer choose import
+
+5.From the open pop up select Existing Maven Project
+
+6.Browse the Extracted folder and click finish
+
+
+Pages--->all the java class related pages will be created under 
+testcases--->all the java  classes for testcases will be created under
+testng.api.base--->baseClass to have all the common methods related the project
+utils--->Programs to interact with external application
+
+     DataLibrary
+	 Reporter--->Extent report configuration
+	 
+Selenium.api.design
+--->Browser
+--->Elements
+Selenium.api.base
+1.It is  library with all  the reusable methods for automation
+2.It is the heart of the framework
+3.wrapper class has all wrapper methods used selenium web driver methods.
+   ---->Reduce duplicate code (try/catch implemented commonly in the wrapper methods)
+   ---->Reusable methods (easily maintain)
